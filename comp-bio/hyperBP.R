@@ -66,7 +66,7 @@ CIChr1 <- bayesint(cross.scanBP, lodcolumn=1, chr=1, prob=0.95) # 95 confidence 
 plot(cross.scanBP, chr=1, main='Confidence Interval for Chr1')
 lines(x=CIChr1[c(1,3), 2], y=c(0, 0), type='l', col='green', lwd=4) # if you want to look for the gene, look for in green area
 eCIChr1 <- bayesint(cross.scanBP, lodcolumn=2, chr=1, prob=0.95) # 95 confidence interval
-
+eCIChr1[c(1,3), 2]
 
 CIChr4 <- bayesint(cross.scanBP, lodcolumn=1, chr=4, prob=0.95) # 95 confidence interval
 plot(cross.scanBP, chr=4, main='Confidence Interval for Chr4')
