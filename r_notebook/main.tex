@@ -362,6 +362,67 @@ The hard part about my project is also getting the data. Many of these datasets 
 
 I think my new RQ3 might still deal with dissemination of the first 2 RQs, such as creating a web app that allows users to do text simplification, OR it might be creating a NLP model that is able to work with all types of research papers, which is very broad. 
 
+\subsection{Friday, March 18, 2022}
+Today I completed the Data Science lab in class. I think that some other RQ3's might be: how can a simplification method be created that is applicable to all domains, not just including natural language processing papers. I'm also wondering how a machine learning model will deal with images and equations in a paper. Does the machine learning model just cut them out? If the equations and images are left in there though, the final "summary" paper will be longer. I think the best approach might be to cut those items out, because a summary is not meant to be fully comprehensive, its only meant to give a brief overview of the information.
+
+\subsection{Saturday, March 19, 2022}
+No progress today. I was in Asheville with my family over the extended weekend.
+
+\subsection{Sunday, March 20, 2022}
+No progress today. I was in Asheville with my family over the extended weekend.
+
+\section{Week of March 21, 2022}
+\subsection{Monday, March 21, 2022}
+I created the first draft of my GANTT Chart today. Figure \ref{fig:gantt} contains the first draft of my GANTT chart. I also worked on my proposal for today. However, I can't seem to find a good acronym for the title of my project, which I want to be something along the lines of: Machine Learning for Text Simplification in Research Papers.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.05]{images/RCompSci2022GANTTChart (1).png}
+    \caption{First draft of GANTT chart}
+    \label{fig:gantt}
+\end{figure}
+
+\subsection{Tuesday, March 22, 2022}
+Today I wrote the intellectual merits part of my preliminary proposal and also created an outline for the rest of the proposal. I also wrote the overview, dissemination, and finished the project personnel part of my proposal.
+
+\subsection{Wednesday, March 23, 2022}
+\begin{itemize}
+    \item Came up with the name of my project: Machine Learning for Research Paper Simplification (MAL-
+REPS)
+    \item Wrote the overview of my project
+    \item Exapnded on RQ1, 2, and 3 and added them to the proposal.
+    \item Rationale for MALREPS
+    \item Theoretical framework (started on it)
+
+\end{itemize}
+
+
+
+\subsection{Thursday, March 24, 2022}
+I FINISHED WRITING MY PRELIMINARY PROPOSAL TODAY AND I TURNED IT IN!!!
+
+\subsection{Friday, March 25, 2022}
+Today I watched the video \href{https://www.youtube.com/watch?v=7kLi8u2dJz0}{"What is BERT? | Deep Learning Tutorial 46 (Tensorflow, Keras & Python)"} which goes over what BERT is and how to use it.
+
+How can similarity be captured between different words? You can look at features between different words.
+\begin{enumerate}
+    \item Look at various features of the input text
+    \item Create vectors of the values of each feature of each input text (called a word embedding)
+    \item The model figures out each feature on its own (we don't know how ML works)
+    \item BERT can generate contextualized embedding (unlike something such as Word2Vec), which means that the same word used in two different contexts will generate different embedding
+\end{enumerate}
+
+\subsection{Saturday, March 25, 2022}
+Today I read over the TensorFlow hub documentation for how to preprocess and use the BERT model itself to create text embeddings. There are also many other models that can be used for word embeddings, such as ulmfit, electra, gtr, and more.
+
+I also found a pretty interesting research paper that describes when BERT was created. I will probably read this paper in the upcoming days. The paper is here \href{https://arxiv.org/abs/1810.04805}{BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+}
+
+The BERT model source code is \href{https://github.com/google-research/bert}{here on GitHub}.
+
+\subsection{Sunday, March 27, 2022}
+Today I wrote code that is able to preprocess text and generate word embeddings using BERT from the tensorflow hub website.
+
 \newpage
 Note: all of my sources are in Mendeley, so I don't have a bibliography here.
 
