@@ -423,8 +423,95 @@ The BERT model source code is \href{https://github.com/google-research/bert}{her
 \subsection{Sunday, March 27, 2022}
 Today I wrote code that is able to preprocess text and generate word embeddings using BERT from the tensorflow hub website.
 
+\section{Week of March 28, 2022}
+\subsection{Monday, March 28, 2022}
+Today I watched the video \href{https://www.youtube.com/watch?v=hOCDJyZ6quA}{Text Classification Using BERT & Tensorflow | Deep Learning Tutorial 47 (Tensorflow, Keras & Python)}. Notes from my video are below:
+
+\begin{itemize}
+    \item Downsampling, take the smallest number of rows based on each category. Ex: x has 100 samples while y has 300 samples. Take 100 rows of x and 100 rows of y to train the data.
+    \item sklearn.model\_selection has a function called train\_test\_split that is able to split pandas data frame into training and test data
+    \item The code from this video is on \href{https://github.com/codebasics/deep-learning-keras-tf-tutorial/blob/master/47_BERT_text_classification/BERT_email_classification-handle-imbalance.ipynb}{GitHub}
+    \item sklearn.metrics.pairwise has a function called cosine\_similarity that can measure the similarity between two sentences that have been turned into a vector with BERT.
+    \item Metrics in ML don't actually have an effect on the model train (that works on the loss function)
+    \item you can only rely on accuracy when using a BALANCED dataset
+    \item Confusion matrix shows correct and wrong predictions
+\end{itemize}
+
+I sent emails to:
+\begin{itemize}
+    \item Mr. Miller (Leveraging BERT)
+    \item Dr. Srivastava (NLP UNC)
+\end{itemize}
+
+\subsection{Tuesday, March 29, 2022}
+Word2Vec is a method of turning a sentence into a sequence of numbers, because comoputers can only understand numbers. I watched the video: \href{https://www.youtube.com/watch?v=hQwFeIupNP0}{What is Word2Vec? A Simple Explanation | Deep Learning Tutorial 41 (Tensorflow, Keras & Python)}
+
+\begin{itemize}
+    \item Embeddings are created via neural networks.
+    \item ``Self-supervised", meaning that there isn't necessarily a correct output
+    \item Words that have a similar meaning result in similar vectors.
+\end{itemize}
+
+The way word embeddings are created:
+\begin{enumerate}
+    \item Take a fake problem (such as fill in a missing word in sentence--BERT)
+    \item Solve it using neural network
+    \item Word embedding is created as a SIDE EFFECT 
+\end{enumerate}
+
+I also began reading the research paper: \href{https://arxiv.org/pdf/2109.06838.pdf}{Employing Proverbs in Context as a Benchmark for Abstract
+Language Understanding}
+
+\begin{itemize}
+    \item Email sent to Dr. Bansal (mbansal@cs.unc.edu)
+    \item Email sent to Dr. Dhingra (bdhingra@cs.duke.edu)
+    \item Email sent to Dr. Barzilay (regina@csail.mit.edu)
+\end{itemize}
+
+\subsection{Wednesday, March 30, 2022}
+Today I prepared the Python workshop that I will be presenting to the class on Thursday (3/31). The topics that I created code for are:
+\begin{itemize}
+    \item Basic Python syntax
+    \item data science (tables, datasets, plotting, analyzing data)
+    \item sentiment analysis
+    \item Classifying movie reviews
+\end{itemize}
+
+\subsection{Thursday, March 31, 2022}
+Today I presented the Python workshop in class. I think that it went really well, except for a few parts where Mr. Gotwals said that R was better than Python O-O
+
+Emails sent today:
+\begin{itemize}
+    \item Dr. Chaturvedi (snigdha@cs.unc.edu)
+    \item Dr. Woodsend (email failure)
+\end{itemize}
+
+\subsection{Friday, April 1, 2022}
+In class today, we learned about file management, UNIX commands, and how computers really work. I think that taking out ``since you're an expert, I was wondering...." makes my emails sound more professional. I also don't know whether or not keeping the line ``I would like to talk to you about my own research questions and hear your thoughts on them" is a good way to ask when emailing potential mentors.
+
+Emails sent today:
+\begin{itemize}
+    \item Dr. Wiseman (swiseman@duke.edu)
+    \item Dr. Wills (lisa@cs.duke.edu)
+\end{itemize}
+
+\subsection{Saturday, April 2, 2022}
+Emails sent to today:
+\begin{itemize}
+    \item Dr. Fahlman (sef@cs.cmu.edu)
+    \item Dr. Singh (singh@ncsu)
+\end{itemize}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 Note: all of my sources are in Mendeley, so I don't have a bibliography here.
+
+
+
 
 \end{document}
 
