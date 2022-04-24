@@ -549,6 +549,44 @@ Today I set up my GitHub repository where I will be creating an npm package that
 \subsection{Friday, April 15, 2022}
 Today I got the first draft of my word substitutions working. The endpoint is /api/simplify and it adds simplified definitions to the ends of words.
 
+\subsection{Saturday, April 16, 2022}
+Today I thought about possible projects that I might want to complete with the 3rd year graduate student at NCSU. My ideas are below:
+
+\begin{itemize}
+    \item Doing text simplification on reddit posts to extract the general gist of information, this would allow more information to be spread on reddit, as people don't usually read super long posts.
+    \item Doing summary creation on reddit posts to generate a summary of a single post
+\end{itemize}
+
+\subsection{Sunday, April 17, 2022}
+No progress today, I was enjoying Spring break with my family.
+
+\section{Week of April 18, 2022}
+\subsection{Monday, April 18, 2022}
+Today I fixed an error on the API endpoint where if you gave it an unkown word that wasn't in the dictionary, it would cause an error. Now, it no longer throws an error. I also created an NPM package for my project.
+
+\subsection{Tuesday, April 19, 2022}
+Today I watched the video: \href{https://www.youtube.com/watch?v=TQQlZhbC5ps}{Transformer Neural Networks - EXPLAINED! (Attention is all you need)}, which explained the paper Attention is all you need. This paper introduced the concept of transformers.
+
+\begin{itemize}
+    \item Vector sequence models produce a variable length output
+    \item Sequence vector models produce a fixed length output
+    \item Sequence to sequence models produce variable length output
+    \item Normal recurrent neural networks are VERY slow to train. Each word is passed in one after the other (time)
+    \item With transformers, the embeddings are created all at once (simultaneously).
+    \item Attention vectors are created using transformers, which represents how important a word is
+\end{itemize}
+
+\subsection{Wednesday, April 20, 2022}
+Today I watched the video \href{https://www.youtube.com/watch?v=XcZGKAF5zxg}{Text Summarization in SpaCy and Python}. They took the entire document and found the most common words that appeared the most number of times throughout, and then chose the sentences with the highest occurrences  of the words with the most occurrences. This method of extractive text summarization may work, but I think it would be worth it to compare this method of text summarization on research papers compared with the k-means clustering method and and seeing which performs better.
+
+\subsection{Thursday, April 21, 2022}
+Today I watched the video \href{https://www.youtube.com/watch?v=Yo5Hw8aV3vY}{Automatic Summarization using Deep Learning | Abstractive Summarization with Pegasus}. They used Pegasus to perform extractive text summarization on news articles and wikipedia articles but also SCIENTIFIC RESEARCH. The abstractive model here works really well, and I think that I will be able to use this model in my project as well. It is able to simplify an abstract of a research paper really easily. They also have a model that is specially trained with the PubMed dataset, which may create better abstractive text summarizations.
+
+\subsection{Friday, April 22, 2022}
+Today I installed gnuplot on my computer and signed up for a supercomputing account for our labs next week. 
+
+\subsection{Saturday, April 23, 2022}
+No progress today, I was at a competition all day.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 Note: all of my sources are in Mendeley, so I don't have a bibliography here.
