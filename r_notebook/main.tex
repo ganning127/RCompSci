@@ -614,10 +614,161 @@ Today we did gnuplot in class. I also created a ML model using the huggingface A
 
 \subsection{Saturday, April 30, 2022}
 Today I created a frontend for the API endpoint that I created yesterday. https://verste-ovz2hei6k-ganning127.vercel.app/simplify
+
+\subsection{Sunday, May 1, 2022}
+Today I watched another \href{https://www.youtube.com/watch?v=4Bdc55j80l8}{video} explaining the paper ``Attention is all you need", which was the video that invented transformers, a type of neural network.
+\begin{itemize}
+    \item encoder - maps input sequence to a continuous representation of the input, which holds all the info from previous inputs
+    \item decoder - generates output while keeping in mind all the previous outputs
+\end{itemize}
+
+The steps that transformers use:
+\begin{enumerate}
+    \item Input embedding - create vectors (numerical representations of the sentence). An example is shown in ``embedding.png".
+    \item Multi-headed attention: how words are associated with each other (if a single word occurs more often with another word)
+\end{enumerate}
+
+Convolutional neural networks are typically used for images, as they scan a window of frames. Before transformers, recurrent neural networks were used (looked at each word at a single time). They process words in order, so start from word 1 and end at final word. This had several issues: by the time you got to the end of the paragraph, the network already forgot what was at the beginning, can't do parallel processing. 
+
+Transformers are much better, they can keep attention, be trained in parallel, are are much faster to train. Transformers look at positional encodings and SELF-attention. Positional embeddings meant that each word had its own vector based on its position in the sentence, so the position meaning was built into the word itself. While attention has been around for a long time, the new item about this paper was SELF attention.
+
+\section{Week of May 2, 2022}
+\subsection{Monday, May 2, 2022}
+Today we went over fundamentals of machine learning, including supervised and unsupervised learning, cluster analysis, PCA, dimensionality reduction, and more. We also went through three mathemtica notebooks on machine learning. We talked about how various models could be used to classify artwork to an author, show the network of relationships between trump and russia, and show how we can attribute a work of writing to an author.
+
+\subsection{Tuesday, May 3, 2022}
+Today I was looking for datasets related to racism. I found a CSV file of 56k tweets from Donald Trump about various topics that he has talked about. Also, I found a paper titled \href{https://ojs.aaai.org/index.php/ICWSM/article/view/18050/17853}{X-Posts Explained: Analyzing and Predicting Controversial Contributions in Thematically Diverse Reddit Forums} that has a good looking reddit dataset, but I cannot access it. I emailed the researcher there, in hopes of getting the dataset. 
+
+\subsection{Wednesday, May 4, 2022}
+Today I watched the video: \href{https://www.youtube.com/watch?v=jgKj-7v2UYU}{Easy Custom NLP T5 Model Training Tutorial - Abstractive Summarization Demo with SimpleT5}, which is a open source python package (Simple T5) that can be custom trained for your own dataset. I think for my project, I could use Simple T5 to train my own model for abstractive text summarization using various models from huggingface. 
+
+\subsection{Thursday, May 5, 2022}
+I am struggling to find research papers that relate to my topic of subject extraction from racist reddit posts. Thus, I also cannot find many datasets with this purpose either. Some other possible ways to go with this might be fake news detection. 
+
+Today in class we did cluster analysis with machine learning.
+
+\subsection{Friday, May 6, 2022}
+Today in class we went over clustering techniques using R. This is how k-means clustering works:
+\begin{enumerate}
+    \item Plot all data points on an appropriate representation (graph, number line, etc)
+    \item Put k number of cluster points directly on the representation just chosen (the best number for k can be chosen through the elbow technique)
+    \item Assign each point to the nearest cluster based on euclidean distance. 
+    \item Move each cluster to the middle of all of the data points assigned to it
+    \item Repeat until the cluster points do not move anymore
+\end{enumerate}
+
+I also met with my mentor today. We are probably not going to go with the racism idea because there are not enough data sets out there that I was able to find that related to racism. For the next week, before we meet, we will each be looking over various papers and find a paper where the topic interests us.
+
+\subsection{Saturday, May 7, 2922}
+No progress today. I am studying for my AP Calculus BC exam.
+
+\subsection{Sunday, May 8, 2922}
+No progress today. I am studying for my AP Calculus BC exam.
+
+\section{Week of May 9, 2022}
+\subsection{Monday, May 9, 2022}
+Today I began working on the summer report presentation that we will be giving to the rest of the group. I am a little unsure about what I will be doing in the summer still, research wise, because we are still deciding on and finalizing our idea. However, it will likely be something to do with machine learning and text simplification on social media posts. Vaibhav is more into social media posts and I am more into text simplification, so we will meet in the middle.
+
+\subsection{Tuesday, May 10, 2022}
+Today I kept working on the summer report presentation that I will be giving to the group. I am still stuck on trying to figure out a topic that we will work on, but I think that I will be reading various research papers from ASONAM, WEbScie, The web conference conferences because they are related to social media. To find accepted papers for each conference, I can search NAME + ``Accepted Papers"
+
+\subsection{Wednesday, May 11, 2022}
+Today I added some sections to my summer report (api endoint, and already published website) and finished up and prepared planning for what I am going to say for these Summer Reports.
+
+\subsection{Thursday, May 12, 2922}
+Today I read over papers from the ASONAM conference. I can't find many promising papers yet about topics that I'm interested in though. It was also very difficult to find papers from the ASONAM conference.
+
+\subsection{Friday, May 13, 2022}
+Today I looked at papers from the WEBSCI conference, which has papers that seem more promising than the one I looked at yesterday. Here are a couple of papers that I might explore further.
+
+\begin{itemize}
+    \item \href{https://arxiv.org/abs/2102.03870}{"Short is the Road that Leads from Fear to Hate": Fear Speech in Indian WhatsApp Groups}. Coded in Python, their code is at \href{https://github.com/hate-alert/Fear-speech-analysis}{github.com/hate-alert/Fear-speech-analysis}
+    \item \href{https://arxiv.org/abs/2004.04046}{“Go eat a bat, Chang!”: On the Emergence of Sinophobic Behavior on Web Communities in the Face of COVID-19}
+     \item \href{https://arxiv.org/pdf/2011.00449.pdf}{Improving Cyberbully Detection with User Interaction}
+\end{itemize}
+
+\subsection{Saturday, May 14, 2022}
+Today I read the paper, “Short is the Road that Leads from Fear to Hate”: Fear Speech in Indian WhatsApp Groups. In text preprocessing, they only kept tweets that were in English and Hindi, covering over 70\% of the data. To filter out spam messages, a high precision lexicon set was used to remove spam. Then, they removed emojis, stop words, and URLs using regex. The multilingual tokenizer CLTK was used to tokenize sentences. 
+
+The purpose of the paper was to identify fear speech messages against Muslims on whatsapp.
+
+Annotations were made by humans to decide whether or not a post actually depicted hate speech.
+
+Docanno can be used for humans to annotate texts
+
+\textbf{Results}
+\begin{itemize}
+    \item The lifespan of a fear speech message was longer than that of a non fear speech message.
+    \item If we are going to ask people from outside NCSSM/NC State to help us with our research, the response rate will likely be very low.
+\end{itemize}
+
+\subsection{Sunday, May 15, 2022}
+The paper, “Go eat a bat, Chang!”: On the Emergence of Sinophobic Behavior on
+Web Communities in the Face of COVID-19 is about confirming that anti-asian behavior and hate speech actually did increase due to COVID-19.
+
+Datasets were collected from Twitter using the Streaming API and 4chan.
+
+\textbf{Ideas}
+I'm thinking that for my RCompSci project, we might be able to do something related to confirimg the prescence of something related to Covid-19? Maybe not directly related to text simplification anymore.
+
+Today I also read the paper "Improving Cyberbullying Detection with User Interaction", which aims to model the behavior of those who cyberbully others through MULTIPLE comments posted, not just one.
+
+We could do asian american racism detection. Comparing the reach of posts and such that are racist towards Asian Americans compared to all other posts on a platform such as Twitter.
+
+
+\section{Week of May 16, 2022}
+\subsection{Monday, May 16, 2022}
+Today I met with Vaibhav about our RCompSci project. He was busy last week so this week we will all read papers and talk about them on friday to discuss possbile project ideas that we might want to pursue together.
+
+I also read the paper \href{https://dl.acm.org/doi/pdf/10.1145/3485447.3512128}{Early Identification of Depression Severity Levels on Reddit
+Using Ordinal Classification}, which is about classifying depression levels into 4 levels, instead of a binary classification of yes/no.
+
+This was their model architechture:
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{images/id_depress_arch.png}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{Tuesday, May 17, 2022}
+Today I read the paper \href{https://arxiv.org/pdf/1703.04009v1.pdf}{Automated Hate Speech Detection and the Problem of Offensive Language∗}, which attempted to classify hate speech from Twitter. Their model accuracy was around 91\%, but when they tested the model on testing data, it only had an accuracy of around 41\%, which may suggest overfitting. A few key takeaways:
+
+\begin{itemize}
+    \item Logistic regression was used to do dimensionality reduction on the data
+    \item scikit-learn and SVMs were used to classify tweets ad hate speech/not hate speech.
+\end{itemize}
+
+Today I also looked at the code from "Deep Learning Models for Multilingual Hate Speech Detection". They have their dataset on \href{https://github.com/hate-alert/DE-LIMIT}{github.com/hate-alert/DE-LIMIT} as well!
+
+\subsection{Wednesday, May 18, 2022}
+Today I signed up for a research gate account. In class we went over how to do summer research and I think that one of my weaknesses is definitely needing to speak up more, instead of always being shy.
+
+Reddit posts can be extracted using the \href{https://praw.readthedocs.io/en/stable/}{PRAW API}.
+
+Today I also read the paper ``Identification of Disease or Symptom terms in Reddit to Improve Health Mention Classification", which is about trying to identify posts where users are discussing health conditions rather than using disease and symptom terms for other conditions. This is known as Health mention classification (HMC).
+
+An F-1 score tests a binary model's accuracy on a dataset. The model in this paper only had an F-1 score of 75\%.
+
+\subsection{Thursday, May 19, 2022}
+Today I met with Vaibhav again. We both agreed that going for the idea of extracting the specific sentences from fear speech containing messages would be a good idea. 
+
+We need to try and look for patterns in the fear speech messages. For the message mentioned in the paper the order of fear speech is as follows:
+\begin{enumerate}
+    \item Citing something from history (using numbers or dates)
+    \item Spreading fear through any means (misinformation, scaring others, etc). THIS IS THE SENTENCE THAT WE WANT TO EXTRACT.
+    \item Asking others to share the message
+\end{enumerate}
+
+I have emailed two of the authors of this paper asking for access to their full dataset, as the one currently mentioned in the paper only contains about 8k tweets out of the full 27.
+
+ALSO TODAY WAS THE LAST DAY OF CLASSSESSSS WOOOO!!! 
+
+I think that tomorrow I will be looking at \href{more of the fear speech JSON}{https://raw.githubusercontent.com/hate-alert/Fear-speech-analysis/master/Data/fear_speech_data.json} file and trying to find more datasets.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 Note: all of my sources are in Mendeley, so I don't have a bibliography here.
-
 
 
 
