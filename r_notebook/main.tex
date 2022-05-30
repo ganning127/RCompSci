@@ -764,13 +764,120 @@ I have emailed two of the authors of this paper asking for access to their full 
 
 ALSO TODAY WAS THE LAST DAY OF CLASSSESSSS WOOOO!!! 
 
-I think that tomorrow I will be looking at \href{more of the fear speech JSON}{https://raw.githubusercontent.com/hate-alert/Fear-speech-analysis/master/Data/fear_speech_data.json} file and trying to find more datasets.
+I think that tomorrow I will be looking at \href{https://raw.githubusercontent.com/hate-alert/Fear-speech-analysis/master/Data/fear_speech_data.json}{more of the fear speech JSON} file and trying to find more datasets.
+
+\subsection{Friday, May 20, 2022}
+Today I tried to find more datasets online about fear speech. While I didn't find many datasets that related to fear speech, I did find some that were more targeted towards hate speech, such as the \href{https://huggingface.co/datasets/hate_speech_offensive}{hugging face dataset}.
+
+\subsection{Saturday, May 21, 2022}
+When looking at the fear speech dataset that I mentioned on Friday, there doesn't really seem to be a pattern in which the fear speech sentence itself is happening in. However:
+\begin{itemize}
+    \item Many of the fear speech sentences appear with numbers in them (Example: "Jamaat-e-Islami has more resources than Pakistan, 70+ bank accounts, 350 mosques, 300 madrasas and 4500 crores Islam = terrorism")
+    \item Many fear speech sentences also have emojis around the sentence (Example: "[EMOJI]  * * It is a district with a population of about 8 lakhs. Muslims * constitute * 70\% of the population here. This is the same district from where 3 Muslims went to * Syria * to be admitted to * ISIS *."), ("The cure for terrorism is not to kill the terrorist ✊  but to close his factory."),
+\end{itemize}
+
+\subsection{Sunday, May 22, 2022}
+Toady I wrote a short Python script that turns the JSON file from the github into a more readable CSV file format. Also, there doesn't look to be too much patterns regarding the sentences right before / after the hate speech sentences specifically, but many of them do cite numbers / statistics and use emojis
+
+
+\subsection{Monday, May 23, 2022}
+Today I wrote more of the script and added sections that performed sentiment analysis on the text. Here are my observations:
+\begin{itemize}
+    \item Fear speech generally has more shares than regular posts
+    \item Average length of a fear speech post is longer
+    \item Fear speech has a lower average sentiment and is much more radical than normal speech.
+\end{itemize}
+
+Patterns in fear speech sentences:
+\begin{itemize}
+    \item First couple of sentences set the premise for the rest of the information
+    \item Next couple sentence is provoking you and trying to get you to hate a certain community. Sentences that provoke directly target another community.
+    \item Last the couple of sentences call to action or addressses the reader directly. Conclusion sentences are usually indirect but are implying something.
+\end{itemize}
+
+Process to going going about doing this
+\begin{enumerate}
+    \item manually annotate each sentence to separate the parts of (premise, provoking, call to action)
+    \item train the model on input features of this sentence. the target for our model will be our annotation.
+    \item Can we build a model that predicts the conclusion based on the provoking sentences?
+\end{enumerate}
+
+TODO: Read 10-15 more stories and discuss whether or not the sentence types that we discussed are present.
+
+\subsection{Tuesday, May 24, 2022}
+No progress today. I had my calculus final exam today.
+
+\subsection{Wednesday, May 25, 2022}
+Today I annotated 4 stories. They were mostly following the structure that we already had, which is really good. However, some of them I don't really understand, as they follow India's politics.
+
+\subsection{Thursday, May 26, 2022}
+Today I annotated 4 more stories. Today was also move out day so I didn't get much done.
+
+\subsection{Friday, May 27, 2022}
+Today I will be meeting with Vaibhav. Before the meeting, I read over some more posts and stories from the fear speech dataset. I finished all the stories that I was supposed to annotate. Here are some questions I did have, howver:
+
+\begin{enumerate}
+    \item Some of the ``sentences" don't end with periods, as the grammar in them is incomplete. How should we deal with this?
+    \item What are we going to do about posts that have sentences that don't fall into a specific category of sentences that we have?
+    \item How are we going to annotate all of these in such a way that a ML model is able to read through them and train itself?
+\end{enumerate}
+
+We need to come up with an actual problem statement that gives the ``motivation" behind why we are doing this research, which would allow us to publish this research. We need to be very clear about what work has previously been done. Then we can find gaps and find a problem statement in which we are able to publish papers.
+
+TODO: Also, read more papers for hate speech.
+
+\subsection{Saturday, May 28, 2022}
+No progress today. I had a competition all day and it is summer break.
+
+\subsection{Sunday, May 29, 2022}
+Today I found some papers that related to hate speech and fear speech. I think that I will be reading the following papers in the days to come:
+
+\begin{itemize}
+    \item \href{https://sci-hub.hkvisa.net/10.1145/3232676}{A Survey on Automatic Detection of Hate Speech in Text}
+    \item \href{https://aclanthology.org/W12-2103.pdf}{Detecting Hate Speech on the World Wide Web}
+    \item \href{https://arxiv.org/abs/1712.06427}{Detecting Hate Speech in Social Media}
+    \item \href{https://sci-hub.hkvisa.net/10.1109/ATSIP.2018.8364512}{On the use of pitch-based features for fear emotion detection from speech}
+    \item \href{https://www.isca-speech.org/archive_open/sp2004/sp04_205.pdf}{F0 and pause features analysis for Anger and Fear detection in real-life spoken dialogs}
+\end{itemize}
+
+\section{Week of May 30, 2022}
+\subsection{Monday, May 30, 2022}
+Today I am going to read over the papers that I said I would read over yesterday. The first paper, \textbf{Survey on Automatic Detection of Hate Speech in Text} points out that there is a lack of data about hate speech, automatic techniques for hate speech detection is not available, creates a definition for hate speech:
+
+\begin{itemize}
+    \item Hate speech has specific targets (ethnic origin, religion, other)
+    \item Hate speech is to incite violence or hate amongst a group
+    \item Hate speech is used to attack or diminish another group
+\end{itemize}
+
+The most common algorithms used to detect hate speech are SVM, random forests, and decision trees. This paper just provided a background on the work that was previously done.
+
+The paper \textbf{Detecting Hate Speech on the World Wide Web} focuses on creating a method to automatically classify hate speech from regular text with 94\% precision. They noted that:
+
+\begin{itemize}
+    \item hate speech uses a small set of high frequency stereotypical words
+    \item they used an SVM to classify hate speech from non hate speech.
+\end{itemize}
+
+The paper \textbf{On the use of pitch-based features for fear emotion detection from speech} and \textbf{F0 and pause features analysis for Anger and Fear detection in real-life spoken dialogs} focuses on detecting emotion through a person's spoken word, which isn't really about machine learning lol.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 Note: all of my sources are in Mendeley, so I don't have a bibliography here.
-
-
 
 \end{document}
 
