@@ -861,19 +861,73 @@ The paper \textbf{Detecting Hate Speech on the World Wide Web} focuses on creati
 
 The paper \textbf{On the use of pitch-based features for fear emotion detection from speech} and \textbf{F0 and pause features analysis for Anger and Fear detection in real-life spoken dialogs} focuses on detecting emotion through a person's spoken word, which isn't really about machine learning lol.
 
+\subsection{Tuesday, May 31, 2022}
+The paper, \textbf{A Survey on Hate Speech Detection using Natural Language Processing} defines hate speech as something that \emph{ any communication that disparages a person or a group on the basis of some characteristic such as race, color, ethnicity, gender, sexual orientation, nationality, religion, or other characteristic}. Below are some methods usually used in hate speech detection:
+\begin{itemize}
+    \item Bag of words: Supervised classification technique. Very simple, bu requires that the same predictive words that appear in the training data must appear again in the testing data.
+    \item Brown clustering has been used to assign individual words to produce hard clusters. 
+    \item Sentiment analysis is sometimes used, as a negative sentiment is said to usually be a hate speech message.
+    \item Bayesian Logistic Regression
+    \item Hate speech must be read in context, as some sentences by themselves might not be hate speech, but when taking into context the site / environment in which they were posted, they might be hate speech then.
+    \item When classifying hate speech from non-hate speech, SVMs are mainly used.
+    \item Data for hate speech detection is usually collected from Twitter, Yahoo!, Formspring, Whisper, and Xanga.
+\end{itemize}
+
+\subsection{Wednesday, June 1, 2022}
+The original paper we read, \textbf{Short is the road that leads from fear to hate: fear speech in indian whatsapp groups} had several results regarding basic analysis between fear speech and regular speech: 
+\begin{itemize}
+    \item Fear speech typically lasts longer (is continously seen by more people) than regular speech
+    \item Fear speech generally has more shares per post than regular texts.
+    \item Emojis were more often used in fear speech than regular texts.
+    \item They got around an MAX 83\% accuracy. Could we be able to build on this?
+\end{itemize}
+
+\textbf{Possible problem statement:} Infering what the people are trying to say from provoking sentences. Vaibhav says that each type of provoking sentences tries of convey a different type of fear.
 
 
 
 
+1. how does this beenefit anyone for publication - benefits people by making things more black and white. also add what type of fear they are inducing. Based on each sentence in a post, we can predict multiple inferences 
 
+for example, if the sentence relates to previous rulers, it might be trying to say that they were atrocious
 
+2. are we generating the conclusion or are we extracting it? 
+    a. do drawing conclusions for every single sentences
+    b. first do data annotation
+    
+Processing:
+a. phase where me and vaibhav go through and see the red sentences
+b. do data annotation and break the dataset into multiple sentences. classify 
+c. come up with around 3 category labels for each sentence.
 
+Next Steps:
+1. create a new sheet with shuffled rows (do not modify original)
+2. do top 20 fear speech and mark sentences with their categories (they need to be red)
+3. do around 3 labels
+4. do not look at Vaibhav's sheet
 
+\subsection{Thursday, June 2, 2022}
+Today I came up with the categories that I will be looking for in the provoking sentences. They are:
+\begin{itemize}
+    \item Fear about politics (stuff about political leaders, elections)
+    \item Fear about religion (items about how a certain religion is bad or that they will do something)
+    \item Fear about terrorism or violence  (items about conflicts, deaths)
+\end{itemize}
 
+Each provoking sentence may take on multiple labels. 
 
+\subsection{Friday, June 3, 2022}
+Today I annotated 3 posts from the fear speech dataset. Most of the posts I've realized that only contains sentences from the same category.
 
+\subsection{Saturday, June 4, 2022}
+I just realized that I have been annotating posts from normal speech instead of fear speech. That is quite annoying lol. However, I did notice something.
 
+\begin{itemize}
+    \item Normal speech posts usually have one type of provoking sentence, whether that be politics, religion, or terrorism/violence.
+    \item Fear speech posts usually have around 1-2, types of provoking sentences
+\end{itemize}
 
+Other than that, I annotated around 8 more posts today. Tomorrow I will be reading about more papers relating to fear speech and hate speech.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
