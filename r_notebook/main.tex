@@ -927,9 +927,53 @@ I just realized that I have been annotating posts from normal speech instead of 
     \item Fear speech posts usually have around 1-2, types of provoking sentences
 \end{itemize}
 
-Other than that, I annotated around 8 more posts today. Tomorrow I will be reading about more papers relating to fear speech and hate speech.
+\subsection{Sunday, June 5, 2022}
+I annotated around 8 more posts today. Tomorrow I will be reading about more papers relating to fear speech and hate speech.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Monday, June 6, 20222}
+Today I read around 3 more fear speech (long) posts from the dataset that we collected. Most of these posts were very confusing for me to understand, as many had references to Indian figures who I do not know.
+
+\subsection{Tuesday, June  7, 2022}
+Today I read over the code of the paper ``HateXplain: A Benchmark Dataset for Explainable Hate Speech Detection", which created a new dataset that created a dataset with:
+\begin{itemize}
+    \item Label: whether or not the piece of text is hate speech
+    \item Targets: the target community of the piece of text (i.e. African Americans)
+    \item Text: the piece of text itself. This piece of text also contains an annotated portion that was the que for the annotator to choose hate speech / normal / offensive speech.
+\end{itemize}
+
+The dataset they used is \href{https://github.com/hate-alert/HateXplain/blob/master/Data/dataset.json}{on github}.
+
+I also learned that the differenece between hate speech and offensive speech was that hate speech is more threatening and includes a call to violence / action, when offensive speech degrades another group.
+
+\subsection{Wednesday, June 8, 2022}
+Today I read over the actual paper ``HateXplain: A Benchmark Dataset for Explainable Hate Speech Detection". The introduction section just details previous work that has been done and how that fails to meet the model the paper created's standards. The introduction also gives a brief overview of their methods and what they did.
+
+To evaluate their code, they used the F-1 score, accuracy, macro F1-score, and AUROC score.
+
+\subsection{Thursday, June 9, 2022}
+Today I will meet with Vaibhav to discuss our progress so far.
+
+
+\begin{itemize}
+    \item \textbf{Possible problem statement}: Sentences written about fear speech are indirect, and that's why we need to make a system to identify the real intentions behind writing that sentence.
+    \item There already has been a paper that identifies fear speech messages
+    \item However, they haven't specified what type of fear (or provoking) is being shown 
+    \item What the paper found fearful seems provoking to us, rather than fearful.
+    \item Just improving the accuracy might not be enough.
+    \item \textbf{Our contributions}: our annotated dataset, model (training and such)
+\end{itemize}
+
+In our cause, if we label the sentences for types of provoking, this model can be deployed on an online platform and this allows companies to mark those sentences as the type of provoking.
+
+TODO:
+\begin{itemize}
+    \item Have a more thought out motivation (who will be helped, why are we doing this)
+    \item Split up each post into individual sentences and then we begin annotating (only fear speech) and populate into new google sheet
+    \item Find more data on fear speech (maybe scrape some from twitter with keywords such as ``terrorist")
+    \item Find conferences that we can submit to in Sep / Oct (\href{https://www.junglelightspeed.com/the-top-10-nlp-conferences/}{here}
+\end{itemize}
+
+
 \newpage
 Note: all of my sources are in Mendeley, so I don't have a bibliography here.
 
@@ -939,8 +983,6 @@ Note: all of my sources are in Mendeley, so I don't have a bibliography here.
 %Sample LaTeX Code
     % \bibitem{giusti}
     % Giusti, Santochi, \emph{Tecnologia Meccanica e Studi di Fabbricazione}. Casa Editrice Ambrosiana, Seconda Edizione
-    
-    
     % \begin{figure}[H]\centering
     % \includegraphics[scale=0.5]{weintrop.jpg}
     % \caption{Weintrop's Taxonomy}
