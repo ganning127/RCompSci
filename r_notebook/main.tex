@@ -973,6 +973,46 @@ TODO:
     \item Find conferences that we can submit to in Sep / Oct (\href{https://www.junglelightspeed.com/the-top-10-nlp-conferences/}{here}
 \end{itemize}
 
+\subsection{Friday, June 10, 2022}
+Today I wrote out the motivation for our research tasks on \href{https://docs.google.com/document/d/17kLWPe7UvaFoTWG4jR4-Zsl5Ngrt6Gf5Pqt5q5fmRsw/edit}{this google doc}.
+
+\subsection{Saturday, June 11, 2022}
+Today I wrote a short Python script that will turn the data we originally had for the dataframe into individual sentences.
+
+The Python script is on \href{https://colab.research.google.com/drive/1SiPwRhosjSFBRKsibU_2UrM60fwUtp9I?usp=sharing}{Google Colab}. However, some of the sentences on here are just single letters / numbers. They're not actually a full sentence.
+
+\subsection{Sunday, June 12, 2022}
+Today I created a list of conferences that I think we should be able to submit to. The Google sheet is linked \href{https://docs.google.com/spreadsheets/d/1xaAznWx4lQz2tLoyNnGAnjFkoCbv78nOoP6YjoFKf5Y/edit#gid=0}{here}.
+
+\section{Week of June 13, 2022}
+\subsection{Monday, June 13, 2022}
+Today was the first day of SRIP. We went over mentor expectations and orientation material for this program. I also filled out the planner for tomorrow on what I will be working on in the lab.
+
+\subsection{Tuesday, June 14, 2022}
+Today I went in person to NCSU for the first time. I mainly worked in the library building (Hunt library) and I further developed the motivation for our research project. I also revamped the script that we had earlier to use nltk's sentence tokenizer instead of just splitting on periods. I worked on a presentation script today because I will be presenting the status of our research project to the grad student's supervisor tomorrow.
+
+\subsection{Wednesday, June 15, 2022}
+Today I went to the NCSU lab again with my mentor. I presented my research to the rest of the research group as a check-in. They suggseted that we look into posts not just from Indian WhatsApp groups, but expand into the US by looking at topics such as gun violence. However, it would be too diffitcult to expand our categories to different topics to include gun violence. Both Vaibhav and I agree on not including this data. Things I've done today:
+
+\begin{itemize}
+    \item Random sample of 10k sentences from the dataframe
+\end{itemize}
+
+\subsection{Thursday, June 16, 2022}
+Today I annotated 200 sentences from the individual sentences dataset. After annotation in the morning, I met with Vaibhav in the afternoon to go over annotation and discussions to go over our disagreements. It took us 1.5 hours to go over just 30 posts, which is an average of around 3 minutes / post.
+
+Additionally, I wrote a short python script for fun that classifies provoking sentences from non-provoking sentences. This model achieved a maximum of 68\% testing accuracy.
+
+
+I also calculated the cohen-kappa score from our differing annotations and got 0.26. This is really low.
+
+\subsection{Friday, June 17, 2022}
+Today I met with Vaibhav in the morning to go over the sentences that we annotated. We came up with the rule that everything that is not ``none" MUST be related to religion somehow, as Vaibhav told me that that is how you get accepted into the most conferences. 
+
+I annotated 200 more sentences today, came up with the annotation guide, and also wrote a script that takes all the raw WhatsApp posts and splits them into individual sentences (ALONG with the sentence directly before and after the target sentence). This allows us to provide context when doing annotations. Vaibhav said that there is a method to feed multiple sentences into a machine learning model at once, which is why we areable to do this.
+
+\subsection{Saturday - Sunday, June 18-29, 2022}
+No progress these days because I had a hackathon.
 
 \newpage
 Note: all of my sources are in Mendeley, so I don't have a bibliography here.
