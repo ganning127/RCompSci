@@ -1014,6 +1014,49 @@ I annotated 200 more sentences today, came up with the annotation guide, and als
 \subsection{Saturday - Sunday, June 18-29, 2022}
 No progress these days because I had a hackathon.
 
+\section{Week of June 20, 2022}
+\subsection{Monday, June 20, 2022}
+Today I annotated around 50 nmore fear speech posts, as well as read over about multi-label classification. The python package simpletransformers has an example of multi-label clssification that I might be able to use on this dataset. I will create a script that attempts to do this tomorrow. I also went to the mentorship break event today and won a ping pong plushie from the tournament.
+
+\subsection{Tuesday, June 21, 2022}
+Today I annotated 100 posts for the individual sentences dataset. I also calculated the cohen kappa score in Python, along with the krippendorf alpha score. I will be calculating our fliess kappa score soon.
+
+Our fleiss kappa score was 0.57, which is already much better than the original dataset's fleiss kappa score of around 0.37.
+
+I also annotated 100 more posts this night.
+
+\subsection{Wednesday, June 22, 2022}
+Today I looked into the differences between Cohen Kappa annotation scores and Krippendorf alpha scores. I think that for our purposes, Cohen Kappa scores will be better as we area closer to being satisfcatory for that inter-rater agreement than for the krippendorf alpha one.
+
+Additionally, I wrote two scripts that used an SVM and Naive Bayes algorithm to detect for fear speech and got around 84.3\% accuracy. This is higher than the paper got. Additionally, I wrote a method to test this accuracy with any piece of text the user enters.
+
+I also met with my mentor today and we decided to use Cohen Kappa score for inter-rater reliability. Our Cohen Kappa score for some reason is not increasing from yesterday, as we had exxactly 0.53 for both days. I also revised my 300-400 annotations, read over various disagreements, and will be annotating 100 more posts tonight.
+
+\subsection{Thursday, June 23, 2022}
+Our annotations from yesterday saw a Cohen Kappa score of 0.53, which was lower than the previous days' 0.59. I met with Vaibahv today to go over our disagreements on the posts, and below are a few important points from our discussions:
+\begin{itemize}
+    \item If a post is unclear or doesn't have enough information, mark it as none
+    \item If a post is not targeted toward a specific religious group (such as politics or general violence), mark it as none
+    \item If the before and current sentences are related, then we are able to say that the provocation in the previous sentence is also in the current sentence, as readers will read previous sentence before current sentence in the real world.
+\end{itemize}
+
+Today I will be annotating 100 more posts, revising my reviews from 400-450, and reading over the disagreements of annotations so we are on the same page. I will be reading the labels that Vaibhav's were correct and Vaibhav will be reading the labels that I said were correct.
+
+
+\subsection{Friday, June 24, 2022}
+Today I was playing around with the script that does provocative sentence classification again and got around a 68\% accuracy. The original fear speech detection is 84\% accurate. I wrote the overview of my project today, including the contributions that our project will make, a very drafty abstract and introduction, and a timeline of when each step in our project should be done by.
+
+I will annotate 200 more sentences later today and meet with my mentor. Last night, Vaibhav and I's annotation reached a cohen kappa score of around 0.73, which is really good.
+
+
+I also figured out a way to translate from English --> ASL Gloss. While the model isn't perfect yet, it achieved a BLEU score on average of about 51, which is interpreted as ``Very high quality, adequate, and fluent translations". I'm thinking about making this my second RCompSci project.
+
+\subsection{Saturday, June 25, 2022}
+Today I went through the disagreements that Vaibhav and I had from the disagreements from 400-500. 
+
+\subsection{Sunday, June 26, 2022}
+Today I annotated 100 more posts from 500-600.
+
 \newpage
 Note: all of my sources are in Mendeley, so I don't have a bibliography here.
 
