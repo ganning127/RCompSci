@@ -991,6 +991,8 @@ Today was the first day of SRIP. We went over mentor expectations and orientatio
 \subsection{Tuesday, June 14, 2022}
 Today I went in person to NCSU for the first time. I mainly worked in the library building (Hunt library) and I further developed the motivation for our research project. I also revamped the script that we had earlier to use nltk's sentence tokenizer instead of just splitting on periods. I worked on a presentation script today because I will be presenting the status of our research project to the grad student's supervisor tomorrow.
 
+Link to \href{https://docs.google.com/document/d/1p_nFBoggFyVAgsPvoWxGu3Vn5lqnA7eN9yLNTDxCdVI/edit?usp=sharing}{meeting notes}
+
 \subsection{Wednesday, June 15, 2022}
 Today I went to the NCSU lab again with my mentor. I presented my research to the rest of the research group as a check-in. They suggseted that we look into posts not just from Indian WhatsApp groups, but expand into the US by looking at topics such as gun violence. However, it would be too diffitcult to expand our categories to different topics to include gun violence. Both Vaibhav and I agree on not including this data. Things I've done today:
 
@@ -998,18 +1000,23 @@ Today I went to the NCSU lab again with my mentor. I presented my research to th
     \item Random sample of 10k sentences from the dataframe
 \end{itemize}
 
+Link to \href{https://docs.google.com/document/d/1xcxDhuWBfwrEzA_Y6ZK-tRo33wt-DthB-97ZrMezN8w/edit?usp=sharing}{meeting notes}
+
 \subsection{Thursday, June 16, 2022}
 Today I annotated 200 sentences from the individual sentences dataset. After annotation in the morning, I met with Vaibhav in the afternoon to go over annotation and discussions to go over our disagreements. It took us 1.5 hours to go over just 30 posts, which is an average of around 3 minutes / post.
 
 Additionally, I wrote a short python script for fun that classifies provoking sentences from non-provoking sentences. This model achieved a maximum of 68\% testing accuracy.
 
+I also calculated the cohen-kappa score from our differing annotations and got 0.26. This is really low. Tomorrow, after our discussion today, we will be annotating 200 more posts to see if our cohen kappa score inreases.
 
-I also calculated the cohen-kappa score from our differing annotations and got 0.26. This is really low.
+Link to \href{https://docs.google.com/document/d/1ZV9jps3gLQnBNUDG9ZCDrG-zob538XkiNL1clB8kYK8/edit?usp=sharing}{meeting notes}
 
 \subsection{Friday, June 17, 2022}
 Today I met with Vaibhav in the morning to go over the sentences that we annotated. We came up with the rule that everything that is not ``none" MUST be related to religion somehow, as Vaibhav told me that that is how you get accepted into the most conferences. 
 
-I annotated 200 more sentences today, came up with the annotation guide, and also wrote a script that takes all the raw WhatsApp posts and splits them into individual sentences (ALONG with the sentence directly before and after the target sentence). This allows us to provide context when doing annotations. Vaibhav said that there is a method to feed multiple sentences into a machine learning model at once, which is why we areable to do this.
+I annotated 200 more sentences today, came up with the annotation guide, and also wrote a script that takes all the raw WhatsApp posts and splits them into individual sentences (ALONG with the sentence directly before and after the target sentence). This allows us to provide context when doing annotations. Vaibhav said that there is a method to feed multiple sentences into a machine learning model at once, which is why we are able to do this.
+
+Link to \href{https://docs.google.com/document/d/1oBA7dLgPfAtDW8P7GTJky1KsGvf8_E19y6jDpj0e1SA/edit?usp=sharing}{meeting notes}
 
 \subsection{Saturday - Sunday, June 18-29, 2022}
 No progress these days because I had a hackathon.
@@ -1025,12 +1032,16 @@ Our fleiss kappa score was 0.57, which is already much better than the original 
 
 I also annotated 100 more posts this night.
 
+Link to \href{https://docs.google.com/document/d/1RadyoYOYbrsICxQLE5TTWOezY15mMqB6Yd6E3F3n8PI/edit?usp=sharing}{meeting notes}.
+
+
 \subsection{Wednesday, June 22, 2022}
 Today I looked into the differences between Cohen Kappa annotation scores and Krippendorf alpha scores. I think that for our purposes, Cohen Kappa scores will be better as we area closer to being satisfcatory for that inter-rater agreement than for the krippendorf alpha one.
 
 Additionally, I wrote two scripts that used an SVM and Naive Bayes algorithm to detect for fear speech and got around 84.3\% accuracy. This is higher than the paper got. Additionally, I wrote a method to test this accuracy with any piece of text the user enters.
 
 I also met with my mentor today and we decided to use Cohen Kappa score for inter-rater reliability. Our Cohen Kappa score for some reason is not increasing from yesterday, as we had exxactly 0.53 for both days. I also revised my 300-400 annotations, read over various disagreements, and will be annotating 100 more posts tonight.
+
 
 \subsection{Thursday, June 23, 2022}
 Our annotations from yesterday saw a Cohen Kappa score of 0.53, which was lower than the previous days' 0.59. I met with Vaibahv today to go over our disagreements on the posts, and below are a few important points from our discussions:
@@ -1041,6 +1052,8 @@ Our annotations from yesterday saw a Cohen Kappa score of 0.53, which was lower 
 \end{itemize}
 
 Today I will be annotating 100 more posts, revising my reviews from 400-450, and reading over the disagreements of annotations so we are on the same page. I will be reading the labels that Vaibhav's were correct and Vaibhav will be reading the labels that I said were correct.
+
+Link to \href{https://docs.google.com/document/d/1Bzm7CkOvRsMDzUCUNdFKpT2kQTxcEdSJR-o43tM2Jsg/edit?usp=sharing}{meeting notes}
 
 
 \subsection{Friday, June 24, 2022}
@@ -1064,6 +1077,8 @@ Today I created an API endpoint in Python and deployed it on Heroku that was abl
 Additionally, I used BERT and keras layers to create a model to attempt multi-class classification.
 
 I also completed my presentation draft (abstract and presentation) and will be reviewing it before I actually record it.
+
+Link to \href{https://docs.google.com/document/d/1yPdZDb-eeijU4GWeDnLeWesqKLKzm0n0pdUh024UHcc/edit?usp=sharing}{meeting notes}
 
 \subsection{Tuesday, June 28, 2022}
 Today I reviewed the sentences where we disagreed on the 100 that we discussed yesterday (500-600). I also read over the pixie paper and the concept of using transformers to adapt them to our methods for our paper.
@@ -1095,6 +1110,8 @@ Today I:
     \item Set up the mturk account and annotation system (however, it only accepts regular text and not emojis, so I'm not sure on what to do with that.
 \end{itemize}
 
+Link to \href{https://docs.google.com/document/d/1kZTLp8gpHfW_Fc1MB4RqrThNCKRpGbhtCXggADEOW5w/edit?usp=sharing}{meeting notes}
+
 \subsection{Friday, July 1, 2022}
 Today was the final day of SRIP. I did my RCompSci presentation today in the lecture hall, along with the rest of the RCompSci folks.
 
@@ -1107,14 +1124,14 @@ Today I tried to set up AWS MTurk requester sandbox, but it kept giving me error
 \end{enumerate}
 
 \subsection{Saturday - Sunday, Jul 2 - 3, 2022}
-I was sick these days so I wasn't able to get much done.
+I was very sick these days so I wasn't able to get much done.
 
 \section{Week of July 4, 2022}
 \subsection{Monday, July 4, 2022}
 Today I annotated sentences to be fearful vs. non-fearful. I only annotated sentences where the final label was "none" or "undecided", as we are only looking for posts where the sentence is only fearful and not provoking. If the label was anything else, then it was provoking.
 
 \subsection{Tuesday, July 5, 2022}
-Today I met with Viabhav and we went over next steps that we will need to do for our project. We need to annotate sentences that we have marked as oppressive and determine whether or not they are actually oppressive or just fearful. Our points are below:
+Today I met with Vaibhav and we went over next steps that we will need to do for our project. We need to annotate sentences that we have marked as oppressive and determine whether or not they are actually oppressive or just fearful. Our points are below:
 
 \begin{itemize}
     \item Only look at fearful vs. not-fearful at only sentences that were marked as oppression.
@@ -1122,6 +1139,7 @@ Today I met with Viabhav and we went over next steps that we will need to do for
     \item Annotate 100 posts
 \end{itemize}
 
+Link to \href{https://docs.google.com/document/d/1eEZaqT8RIj2LU541y_P7s_mW0gKrRpY3Ivmap_tp094/edit?usp=sharing}{meeting notes}.
 
 \subsection{Wednesday, July 6, 2022}
 Today I went through and annotated my share of the posts as fearful vs. non-fearful in all posts with "oppression" or "Undecided" as the final label.
@@ -1132,7 +1150,7 @@ Today I went through the 10k posts with before and afters and annotated 100 post
 \subsection{Friday, July 8, 2022}
 No progress today. I am waiting on my mentor to finish his annotations.
 
-\subsection{Saturday, July 9, 2022}t
+\subsection{Saturday, July 9, 2022}
 I was completely sick today, so no progress.
 
 \subsection{Sunday, July 10, 2022}
@@ -1155,7 +1173,22 @@ I tried what Vaibhav said about creating an MTurk worker account. I really don't
 Today I wrote the script that created files of 200 annotations each for Vaibhav and I. I will begin annotations tomorrow.
 
 \subsection{Thursday, July 14, 2022}
-Today I annotated 200 posts.
+Today I annotated 200 posts. The following days I spent around 2 hours each day annotating 200 posts into our four categories of: culture, action, oppression, or none.
+
+A description of the meanings of each category can be found \href{https://docs.google.com/document/d/1tLoClm225HeHbwG9vzvwQSTS5GVb8t2CusXJq6LHmEw/edit?usp=sharing}{here}
+
+In short, here's a description of each category (examples are on the annotation guide above):
+
+\begin{itemize}
+    \item Culture: Posts attacking or causing you to dislike either Muslim or Hindu culture. 
+
+    \item Oppression: Oppressive-provoking posts state facts about the horrors that one person/group has done against another.
+
+    \item Action: Tells the READER of the post to do something bigger than just sharing the post, such as to stop worshiping a God. 
+
+    \item None: posts that don't fall into any other category
+\end{itemize}
+
 
 \subsection{Friday, July 15, 2022}
 Today I annotated 200 posts.
@@ -1174,7 +1207,13 @@ Today I annotated 200 posts.
 Today I annotated 200 posts.
 
 \subsection{Wednesday, July 20, 2022}
-Today I annotated 200 posts.
+Today I annotated 200 posts. Today we also met with Dr. Singh, the PI of the lab at NCSU. Here, we decided that we will probably be submitting our paper to the ICWSM conference. He also gave us a couple suggestions:
+
+\begin{itemize}
+    \item Trying to figure out the relationship between provoking sentences and if its indicative of the post. (NOTE: all sentences (provoking and non-provoking) were extracted from fearful posts, so this may not be a very good indication of how well provoking sentences predict fearful/not-fearful)
+
+    \item Figure out how fearful/non-fearful posts is indicative of the type of provoking sentence.
+\end{itemize}
 
 \subsection{Thursday, July 21, 2022}
 Today I annotated 200 posts.
@@ -1211,6 +1250,7 @@ Today I annotated 200 posts.
 \subsection{Sunday, July 31, 2022}
 No progress today.
 
+\section{Week of August 1, 2022}
 \subsection{Monday, August 1, 2022}
 Today I have finished annotating a fill in posts. Also, I wrote a script that combines all the annotated datasets together.
 
@@ -1231,7 +1271,7 @@ No progress today, I went to get my drivers license in the morning and I have a 
 \end{figure}
 
 \subsection{Friday, August 5 - Wednesday August 10}
-No progress. I was in San Francisco, and I had to write college apps :(
+No progress. I was in San Francisco for a hackathon, and I had to write college apps :(
 
 \subsection{Thursday, August 11, 2022}
 Today I took the 10k sentence sample that Vaibhav and I have annotated and I combined it with my annotations, so now we have 4000 annotated sentences. Additionally, I ran a model to see how well the classification performs (it is currently a Naieve Bayes model), and doesn't use BERT yet, which I will integrate into this tomorrow.
@@ -1240,6 +1280,7 @@ Today I took the 10k sentence sample that Vaibhav and I have annotated and I com
 \subsection{Friday, August 12 - Sunday, August 14}
 No progress. I moved into NCSSM on Sunday.
 
+\section{Week of August 15, 2022}
 \subsection{Monday, August 15, 2022}
 Today I ran a BERT model on the data set that we have. For some reason, I don't think the model is training because the accuracy is always stable at around 54.38\%. I just ran a second model and achieved a balance accuracy (90\%).
 
@@ -1261,6 +1302,302 @@ Today we did a writing workshop:
     \item Create an acrynoym for our project so it's easier for reviewers to remember
 \end{itemize}
 
+\subsection{Thursday, August 18, 2022}
+Since I'm completely done with my annotations (3k), I'm currently waiting on Vaibhav to finish his 3k sentences to be annotated. Today I met with him to determine next steps and how to move forward:
+
+\begin{itemize}
+    \item Vaibhav is currently occupied with another research project and will likely get around to doing our project's annotations by 8/31
+    \item Since we do have a 90\% accuracy, I need to figure out what this really means. Is it macro or micro acccuracy?
+    \begin{itemize}
+        \item Macro accuracy: compute accuracy for each class (since we have four classes), and then we average the accuracies for each class to get one overall accuracy
+
+        \item Micro accuracy: don’t consider individual accuracies; treats each sample as either predicted correctly or if it was predicted wrongly (no matter which class). Take the number of correctly predicted divided by the total number
+    \end{itemize}
+\end{itemize}
+
+Additionally, we came up with a list of items for me to do!
+
+\begin{itemize}
+    \item Feed in all three sentences by concatenating and feeding in three sentences at once
+
+    \item Read through Vaibhav's pixie paper and try: XLNet, Roberta, sentence embedding approaches
+    \item Figure out the differences between BERT embeddings and my current code's usage of BERT.
+\end{itemize}
+
+
+\subsection{Friday, August 19, 2022}
+Today I refactored my giant code file called ``BERT Provocative Sentence Classification.ipynb" which contains 2 machine learning methods. I split up each method into its individual file: BERT preprocess uncased (54\% accuracy), BERT base cased (90\%).
+
+Looking at the differences between BERT Cased and Uncased:
+\begin{itemize}
+    \item BERT cased keeps all text in the original format (uppercase text stays uppercase)
+    \item BERT uncased useful when capitalization/accents don't really have an effect on the meaning of the text
+\end{itemize}
+
+This strikes me as a bit odd--as most of our text doesn't really matter if the text is uppercase/lowercase (which means theoreteically, BERT uncased would be better. However, BERT cased actually produces a much higher accuracy).
+
+\subsection{Saturday, August 20, 2022}
+Today I modified my BERT model to take into account both the ``before" sentence and the current sentence within a fear speech post. Essentially, when splitting the existing dataset of fear speech and non-fear speech posts, we only look at fear speech posts. Within each fear speech post, we look at every sentence individually. Then, we store data in a CSV in a way that we also store the sentence BEFORE AND AFTER the current sentence in the overall fear speech post as well, in order to provide context for the current sentence.
+
+When plotting the model's training history, shown in figure \ref{fig:bert_cased_w_before}, we see that while the training accuracy is continuously increasing, the validation accuracy only increases slightly, which may suggest that the model is overfitting to the training data and is not generalizing enough.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{images/bert_cased_w_before.png}
+    \caption{Bert cased model trained on the current & before sentences}
+    \label{fig:bert_cased_w_before}
+\end{figure}
+
+When doing research online, here was a list of ways to reduce overfitting on machine learning models:
+\begin{enumerate}
+    \item Reduce the number of layers / number of elements in hidden layers (hidden layers = layers between the first and last layer)
+    \item Use dropout layers, which randomly remove certain features by setting them to zero
+\end{enumerate}
+
+
+\subsection{Sunday, August 21, 2022 || THE CODE WORKS IM SO HAPPY}
+Today I made the model we trained yesterday to be accessible to the user. For example, the user would be able to type in a sentence and the model will make a prediction on the category that the sentence belongs to. With each input, we show a percentage representing the chance that the model is in that category
+
+THE CODE WORKS IM SO HAPPY. Here's a couple of training sentences and their predicted categories: please note that since the dataset was trained fear speech sentences extracted from Indian WhatsApp groups, I have to feed those types of sentences into the model; none of the sentences below reflect my personal opinion and are only used for testing purposes.
+\begin{itemize}
+    \item ``hinduism is fake" culture: 82\% (correct)
+    \item ``yesterday the children played outside" none: 98\% (correct)
+    \item ``you need to stop praying in all of the mosques" action: 93\% (correct)
+    \item ``the hindus killed 83 million people in 2021" oppression: 96\% (correct)
+\end{itemize}
+
+Figure \ref{fig:bert_cased_metrics} shows the metrics from my trained model.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{images/bert_cased_metrics.png}
+    \caption{Bert cased model's metrics}
+    \label{fig:bert_cased_metrics}
+\end{figure}
+
+\section{Week of August 22, 2022}
+\subsection{Monday, August 22, 2022}
+When performing data analysis on the differences between provoking sentences vs. non-provoking sentences, I created figures \ref{fig:senti_nonprov}, \ref{fig:senti_prov}, \ref{fig:len_act}, \ref{fig:len_cult}, \ref{fig:len_none}, \ref{fig:len_opp}, \ref{fig:senti_act}, \ref{fig:senti_cult}, \ref{fig:senti_none}, \ref{fig:senti_opp} (I'm honestly not sure why these references aren't working, but the graphs are shown below)
+
+The comparison between figures \ref{fig:senti_nonprov} \ref{fig:senti_prov} shows that provoking sentences are generally more negative in sentiment than non-provoking sentences. Otherwise, thee spread of provoking/non-provoking sentences is REALLY similar, including with the small spike up at around 0.5 sentiment.
+
+The comparison between figures \ref{fig:len_act}, \ref{fig:len_cult}, \ref{fig:len_none}, \ref{fig:len_opp} shows the lengths in comparison between the various categories. Sentences marked as ``oppression" and ``action" tend to be longer than all other categories, but the ``none" category seems to be the shortest. Average lengths are shown in figure \ref{fig:len_avg}.
+
+The comparison between \ref{fig:senti_act}, \ref{fig:senti_cult}, \ref{fig:senti_none}, \ref{fig:senti_opp} shows that the ``none" category is essentially a peak at zero with a symmetrical distributions on either side, while all other categories show that their sentences are more negative, which is expected. Additionally, when looking at figure \ref{fig:senti_avg}, we see that oppression has the most negative sentiment, followed by culture, action, and lastly, none.
+
+\begin{figure}[hbt!]
+  \centering
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/senti_nonprov.png}
+    \label{fig:senti_nonprov}
+    \caption{Sentiment of nonprovoking sentences}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/senti_prov.png}
+    \label{fig:senti_prov}
+    \caption{Sentiment of provoking sentences}
+  \end{minipage}
+\end{figure}
+
+%%%%%
+
+\begin{figure}[hbt!]
+  \centering
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/len_act.png}
+    \label{fig:len_act}
+    \caption{Length of action sentences}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/len_cult.png}
+    \label{fig:len_cult}
+    \caption{Length of culture sentences}
+  \end{minipage}
+\end{figure}
+
+
+%%%%%
+
+\begin{figure}[hbt!]
+  \centering
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/len_none.png}
+    \label{fig:len_none}
+    \caption{Length of none sentences}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/len_opp.png}
+    \label{fig:len_opp}
+    \caption{Length of oppression sentences}
+  \end{minipage}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.8]{images/len_avg.png}
+    \caption{Average length by category}
+    \label{fig:len_avg}
+\end{figure}
+
+%%%%%
+
+\begin{figure}[hbt!]
+  \centering
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/senti_act.png}
+    \label{fig:senti_act}
+    \caption{Sentiment of action sentences}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/senti_cult.png}
+    \label{fig:senti_cult}
+    \caption{Sentiment of culture sentences}
+  \end{minipage}
+\end{figure}
+
+
+%%%%%
+
+\begin{figure}[hbt!]
+  \centering
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/senti_none.png}
+    \label{fig:senti_none}
+    \caption{Sentiment of none sentences}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/senti_opp.png}
+    \label{fig:senti_opp}
+    \caption{Sentiment of oppression sentences}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics{images/senti_avg.png}
+    \caption{Average sentiment by category}
+    \label{fig:senti_avg}
+\end{figure}
+
+
+\subsection{Tuesday, August 23, 2022}
+Today I tried to deploy my model to an API endpoint, but I kept getting an error exporting my model because it is so large. I was using the package ``joblib", which essentially allows you to download any Python variable as a file and allows you to load it into another environment and use that variable as normal. However, when attempting to load my exported file back into the code using ``joblib" I received an error saying that I was using too much RAM. I've tried debugging this error for an hour or so but no luck. I might try using pickle or using tensorflow's native export function feature next.
+
+Additionally, I finished my presentation that I will be giving to the rest of the class on my \href{https://drive.google.com/file/d/1DS6dqwKjhULGXQlOEomzv4M6ShNxKnqK/view?usp=sharing}{Summer Updates}.
+
+I'm also still waiting on Vaibhav to respond to me about how many annotations he has completed/his progress.
+
+\subsection{Wednesday, August 24, 2022}
+Today I spent some time thinking about the user flow of the app and figuring out how the frontend that the user interacts with would work with the backend. Figure \ref{fig:userflow_df} shows the user interactions and how that would interact with my model's frontend web app and API endpoint.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.4]{images/userflow_d1.png}
+    \caption{User Flow of Provocative Sentence Classification}
+    \label{fig:userflow_df}
+\end{figure}
+
+
+\subsection{Thursday, August 25 - Sunday, August 28}
+No progress these days. I was in Washington, DC to receive my award as Coolidge Senator.
+
+\subsection{Monday, August 29, 2022}
+Today in class Mr. Gotwals gave us a list of seven items that we should do:
+\begin{enumerate}
+    \item Keeping track of EVERYTHING: conversations, people you meet, etc
+    \item Keeping a networking notebook 
+    \item keeping track of all of your sources in Mendeley or another citation tracker
+    \item Establishing a personal pacing guide so you know what needs to be done each day
+    \item Spend more time THINKING
+    \item Establish a method of evaluating and recording research papers
+\end{enumerate}
+
+Today I decided to take a break from doing my research project because I wanted a day to re-coup myself before tackling my research project. However, I've added around 5 connections from Microsoft (2), UNC RENCI (1), Credit Suisse (1), and Bit Project (1) to my connections tracker.
+
+\subsection{Tuesday, August 30, 2022}
+In class, we had a workshop with Dr. Myra Halpin on how to write our research papers for competition. Here were the 3 points that I really wanted to highlight about my research in fear speech:
+\begin{enumerate}
+    \item We currently know what hate speech is. In contrast, fear speech is aimed at creating a sense of existential fear in a reader (such as imminent threats)
+
+    \item In some fear speech posts, sentences can be classified as provoking, which may cause readers to do something bad or make them angry
+
+    \item We create a machine learning model to detect for provocative sentences with 90\% accuracy, and we’re going to make this available for everyone to use.
+\end{enumerate}
+
+Feedback about my three points:
+\begin{itemize}
+    \item The first sentence needs to convince the reader that fear speech and provocative sentences are an actual problem
+    \item The other two points are pretty good about what I've done already and the end goal of my research (to create a provocative sentence detection model that's able to flag sentences as provocative in social media sites).
+\end{itemize}
+
+In general, these points were very important:
+\begin{enumerate}
+    \item The first sentence is VERY important
+    \item Make what your goal is very clear
+    \item Validation and how to test your data
+    \item The goal isn't to sound intelligent, it is to help your audience learn and grow
+\end{enumerate}
+
+Today I took another attempt at exporting the model file that I have written in Python. However, I'm getting various errors. I'm unable to load the model back into Colab to test if it works or not since I run out of RAM each time I attempt to do that (model is too big, but was only trained on 4 epochs). I don't think ``joblib" will be able to do exporting the model. When attempting with ``pickle", I get an ``Ran out of input" error, which from Google means that the file I'm trying to read from is empty, but I've downloaded it and it clearly isn't empty...
+
+Since these methods both didn't work, I'll be attempting to export both the model and tokenizer natively using their built in functions (which is similar to pickle and joblib).
+
+My plan is to deploy the model on huggingface using gradio to create both a web app and an API endpoint that can identify provoking sentences.
+
+\subsection{Wednesday, August 31, 2022}
+Today I tested a version of the BERT cased model that takes in all three sentences, instead of just the one sentence. With this model, I was able to achieve 92\% balanced accuracy, as shown in figure \ref{fig:92}.
+
+\begin{figure}
+    \centering
+    \includegraphics{images/92.png}
+    \caption{Balanced accuracy on all 3 sentences}
+    \label{fig:92}
+\end{figure}
+
+I also fed in the before and current sentence (how I annotated sentences myself), and the model produced a balanced accuracy of 97\%, as shown in figure \ref{fig:97}.
+
+\begin{figure}
+    \centering
+    \includegraphics{images/97.png}
+    \caption{Balanced accuracy on before and current sentences}
+    \label{fig:97}
+\end{figure}
+
+\subsection{Thursday, September 1, 2022}
+Today in class we went through a crash course on computational chemistry. 
+Additionally, I created a pros/cons list of the MolecVue activities. Here are some PROS:
+
+\begin{enumerate}
+    \item The wording is conversational, it’s not written like a typical textbook
+    \item The “Introduction and Overview” sections are really helpful in understanding what students will be doing in the lab, so one does not need to read through the entire document to understand what they will be doing.
+\end{enumerate}
+
+CONS:
+\begin{enumerate}
+    \item The procedure doesn’t have any pictures in it, only text descriptions of what to click. This can be confusing to find the positions of everything, especially when a teacher doesn’t know the software super well and is asked to help a student.
+    \item At the end of the procedure, they don’t show a “expected” or “correct” result, which makes it difficult for students to know if the procedure they performed was correct or if they messed up somewhere.
+    \item There isn’t a section on “objectives” or what the student should be learning (at a high level) at the beginning of the document. This makes it difficult for the teacher to match this document up with the standards that they need to be teaching.
+    \item MolecVue doesn’t have a structured “curriculum”, it’s more of a set of activities and it can be difficult for teachers to know where to start or which activity to begin with for a group of students if they do not have previous computational chemistry experience. 
+    \item Some of the documents don’t have instructors notes, such as these:
+    \begin{itemize}
+        \item \href{https://drive.google.com/file/d/1F03piQqm2UlihIMhjv44DLJZ301NYJzz/view}{VSEPR 5 EGs}
+        \item \href{https://drive.google.com/file/d/1nUpMCmk5g_n33nR2MTbBd722eFwnzuob/view}{Group Theory BCCE}
+        \item \href{https://drive.google.com/file/d/124zYFVeFI3ZVwJVfoQpoWoudQMcn7dep/view}{VSEPR 2 3 4 EGs}
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Friday, September 2, 2022}
+Today I figured out what ``balanced accuracy" really means. Our model using BERT cased produced a 90\% accuracy. \textbf{Balanced accuracy} is the average of recall for each class in multi-class classification.
+
+Recall that $R = \frac{T_p}{T_p + F_n}$, where $R$ is recall, $T_p$ is the number of true positives, and $T_n$ is the number of true negatives.
+
+Today I also start my first extended weekend of senior year, so not too much was done today.
 
 
 
