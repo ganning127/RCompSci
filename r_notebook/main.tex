@@ -1599,9 +1599,79 @@ Recall that $R = \frac{T_p}{T_p + F_n}$, where $R$ is recall, $T_p$ is the numbe
 
 Today I also start my first extended weekend of senior year, so not too much was done today.
 
+\subsection{Saturday, September 3, 2022}
+Today I began working on my ISEF SRC Research Plan. I've finished the rationale, Research Questions, and hypothesis sections today.
 
+\subsection{Sunday, September 4, 2022}
+Today I've finished the first draft of my SRC research plan. I have completed the methods, risk & safety considerations, and data analysis sections today.
 
+My research plan can be found \href{https://docs.google.com/document/d/1Q7jFEalh9ScSkIwjcvOFlRqDYMJcEpE9-Bwyo190OLA/edit#}{here}.
+\section{Week of September 5, 2022}
+\subsection{Monday, September 5, 2022}
+I think we will now be submitting our papers to the IEEE journal on Transactions on computational social systems, Vaibhav said that there is a much higher chance of us being published there than ICWSM. However, I still want to submit to ICWSM because it is difficult and I want to give it our best shot.
 
+The papers that Vaibhav showed me in the IEEE journal (shown in list) both seem very basic? The papers themselves don't really make sense to me, as they are basically using one model (Textblob) to extract sentiment and THEN training other models on the output data of that mode to see which model mimics the outputs the best? Isn't this basically just seeing which model can immitate the original model the best? This doesn't really make sense to me why this is useful...
+\begin{itemize}
+    \item COVIDSenti: A Large-Scale Benchmark Twitter Data Set for COVID-19 Sentiment Analysis \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9340540}{here}
+    \item Sentiment Analysis of Lockdown in India During COVID-19: A Case Study on Twitter \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9301194}{here}
+\end{itemize}
+
+\subsection{Tuesday, September 6, 2022}
+Today I finished writing & turned in my ISEF research plan after going through a few rounds of revisions.
+
+\subsection{Wednesday, September 7, 2022}
+No progress today.
+
+\subsection{Thursday, September 8, 2022}
+Today I met with my mentor to discuss how to move forward. Here were the main talking points:
+\begin{itemize}
+    \item Vaibhav is currently working on finishing his annotations; and I will be working on data analysis on the dataset that I've created by creating (in order of priority):
+    \begin{enumerate}
+        \item Topic modeling (LDA) for each category (extracts top 5-10 topics)
+        \item Create empath value per category
+        \item LiWc lexicon for emotions per category
+        \item Create a word cloud for each category (make them into a funny shape) like prepvious papers
+        \item Create Toxicity per category
+    \end{enumerate}
+    \item Our paper will have 3 main contributions:
+    \begin{enumerate}
+        \item Dataset
+        \item Data analysis of our each category of dataset
+        \item Classification algorithm
+    \end{enumerate}
+    
+    \item I need to: make graphs about sentiment I’ve made, calculate the skewness and kurtosis for each category
+    \item Read about lime (analysis about our model)
+    \item Create a flowchart to describe our methods
+    \item We're going to try and get published in the ieee transactions on computational social systems journal
+    \item I'll be starting the final paper by working on it a little everyday
+\end{itemize}
+
+\subsection{Friday, September 9, 2022}
+Today I performed many of the data analysis items we agreed upon yesterday:
+\begin{itemize}
+    \item Topic modeling using gensim in Python
+    \item Empathy values using empath
+\end{itemize}
+
+It's a little difficult to visualize the empath values, as the graph that the library produces is very hard to read, as shown in figure \ref{fig:empth}.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{images/empth.png}
+    \caption{Empth values vs. category}
+    \label{fig:empth}
+\end{figure}
+
+\subsection{Saturday, September 10, 2022}
+Today I continued working on the data analysis tasks:
+\begin{itemize}
+    \item Toxicity using the perspective API
+    \item LiWc?
+\end{itemize}
+
+I requested and gained access to Google's Perspective API, which is often used to detect for toxicity. However, when testing my code, I accidentally sent too much data, so now I'm being rate limited and will need to run the actual data analysis on toxicity again tomorrow (but the code itself is done, I just need to click run again).
+
+Additionally, I'm not really sure what I'm supposed to be doing with LiWc, which is a proprietary item? I've asked Vaibhav abobut what I'm supposed to be using it for!
 
 \newpage
 Note: all of my sources are in Mendeley, so I don't have a bibliography here.
