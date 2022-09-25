@@ -13,7 +13,8 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{hyperref}
-\usepackage{hyperref}
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\par\singlespacing\small}
 
 \begin{comment}
 Resources
@@ -1736,6 +1737,68 @@ Just saw the email saying that I will be presenting at the Morganton RSci Intere
     \caption{Categories by which sentences were classified}
     \label{fig:categories}
 \end{figure}
+
+\section{Week of September 19, 2022}
+
+\subsection{Monday, September 19, 2022}
+Today I worked on the paper and also got through most of the tasks Vaibhav said I should get done by the next time we meet. Vaibhav still isn't done with his annotations yet, so I'm hesitant to start creating the machine learning model, as the balance and distribution of the data will change, affecting which type of model we create. I wrote the data collection & annotation section of our paper, and revised the introduction section.
+
+\subsection{Tuesday, September 20, 2022}
+Today I have finished up revising the data collection & annotation section of the final paper. I'm also currently working on going through the graphics that I've made and changing them to be more friendly to the eyes in their colors. I'll be standardizing the color I'm using for each category in ALL graph to be the following:
+\begin{itemize}
+    \item None: \#a3a3a3
+    \item Oppression: \#edd5a6
+    \item Culture: \#8a69a0
+    \item Action: \#b35656
+\end{itemize}
+
+\subsection{Wednesday, September 21, 2022}
+Today I wrote a 270-word abstract for the Davidson Fellows Application. This abstract is linked \href{https://docs.google.com/document/d/1Oml89K4HLl-hOmNRIxNZvUlTRzkaLN7PjgQ6yiHBL-A/edit}{here}. I also emailed Davidson Fellows because my application portal is broken and won't let me access or view my application.
+\\
+
+Additionally, I also went through all my data analysis charts today and standardized the colors for each category and the sizes for fonts and everything.
+
+\subsection{Thursday, September 22, 2022}
+Today in class we discussed about what we were going to do for every thursday in RCompSci this fall, because we are dropping the Computational Chemistry project idea. The best ideas we came up with are:
+\begin{item}
+    \item Guide to RCompSci: time management, how to decide on a project, how to pace yourself, how to write a proposal (in an informal way) (voted on my majority)
+    \item Data Science workshops for schools across NC (this project might take up too much time)
+    \item Book discussions (not voted upon by the majority)
+\end{item}
+
+Additionally, Vaibhav has finished everything but his last 200 annotations today!
+
+\subsection{Friday, September 23, 2022}
+Today I wrote the short introduction for my research project using the following structure:
+
+\begin{enumerate}
+    \item Context
+    \item Question/Problem-Condition
+    \item Significance/Problem-Consequence
+    \item Claim
+\end{enumerate}
+
+Here's the introduction that I wrote:
+\begin{quote}
+In recent years, millions of hate speech posts have been sent across social media channels each year. Along with this are thousands of fear speech messages–which aim to instill an existential fear in the reader. In contrast to hate speech, fear speech has very limited previous work. Preliminary models for fear speech detection are insufficient: there lacks a detection system for dangerous or provocative sentences within fear speech posts. Without a method of accurately detecting provocative sentences, anger and violence may ensue from those who act upon the content of these sentences. By curating a dataset and training a BERT model, an efficient fear speech detection system was created with 97\% balanced accuracy, allowing social media companies to flag these provocative sentences accordingly.
+\end{quote}
+
+Additionally, I trained a ROBERTA and another BERT model,and got around 67\% accuracy.
+
+\subsection{Saturday, September 24, 2022}
+Today I met with Vaibhav about the status of our project, and here were the updates:
+\begin{itemize}
+    \item We are now pivoting our project to be submit to The Web Conference
+    \item Determine which type of accuracy simpletransformers are calculating
+    \item Get precision and recall (for each class) onto our model in addition to accuracy
+    \item Try XLNet, Universal Sentence Encoder, and other models from SimpleTransformers
+    \item By next Friday (9/30), have a model with good precision/recall and have substantial information in our paper's draft
+    \begin{itemize}
+        \item Precision: $>= 70\%$
+        \item Recall $>= 80\%$ 
+    \end{itemize}
+\end{itemize}
+
 
 
 \newpage
