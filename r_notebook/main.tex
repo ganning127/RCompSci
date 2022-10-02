@@ -1799,7 +1799,59 @@ Today I met with Vaibhav about the status of our project, and here were the upda
     \end{itemize}
 \end{itemize}
 
+Also, we need to figure out a way to upload all of our Goolge Colab files to GitHub so we can link our code. Tutorial is linked \href{https://www.geeksforgeeks.org/how-to-upload-project-on-github-from-google-colab/}{here}.
 
+\subsection{Sunday, September 25, 2022}
+Today I had a brief meeting with Vaibhav and we have determined that IF our mdoel is good enough, we will be submitting to the web conference; however, if our model's precision and recall aren't as high as we hoped (values shown above), then we will submit to IEEE.
+
+Today I also found a way to get recall and precision scores with simpletransformers. 
+
+\begin{itemize}
+    \item Roberta (5 epochs): precision = recall = 0.65 (only feeding in ``sentence")
+    \item Roberta (10 epochs): precision = recall = accuracy = f1 = 0.685857 (only feeding in ``sentence")
+    \item Roberta (3 epochs): precision = recall = accuracy = f1 = 0.693 (both ``before" and ``sentence")
+    \item Roberta (10 epochs): precision = recall = accuracy = f1 = 0.7121 (both ``before" and ``sentence")
+\end{itemize}
+
+The method that accuracy is computed when using simpletransformers is totalCorrectPred / totalRows, not taking into account how many are correct by each class, only total.
+
+\section{Week of September 26, 2022}
+\subsection{Monday, September 26, 2022}
+Today I wrote the introduction to my research paper and submitted it on Canvas. Vaibhav still has not finished his annotations yet though. But, I think we are making good progress towards our IEEE deadline.
+
+\subsection{Tuesday, September 27, 2022}
+Today I created a method of getting the separate precision and recall scores given a certain model and specifiying how many epochs to train it for. This is a HUGE improvement to copying and pasting the code over and over again. Now, it's much easier to test different models WITHOUT erasing the results of the previous test runs, allowing us to see which model produces the best results just by running one line of code. 
+
+Today I also ran three models to compare accuracy. Figure \ref{fig:twitter_roberta} shows the results from a Twitter trained Roberta base model. This model shows that the precision and recall scores are VERY high, probably because of a data imbalance. We'l need to balance our model's weights before training next time. Also, the twitter roberta model was trained over 10 epochs
+
+I also trained a ``distilbert-base-uncased-finetuned-sst-2-english" model, but received similar results.
+
+\begin{figure}[!hbt]
+    \centering
+    \includegraphics[scale=0.3]{images/twitter_roberta.png}
+    \caption{Twitter Roberta base model trained on 10 epochs results}
+    \label{fig:twitter_roberta}
+\end{figure}
+
+\subsection{Wednesday, September 28, 2022}
+Today Vaibhav finished his annotations. Additionally, I talked to Vaibhav about the low precision/recall scores, and he informed me that it is most likely because our datset is imbalanced (there are a lot more sentences labeled ``none") than any other category. Therefore, we need to add balanced classes into our model. However, while there's a way to do that using sklearn, I haven't found a method of doing balanced classes when using simpletransformers. Therefore, we can only balance our scores, and NOT our model, which seems a little off.
+
+\subsection{Thursday, September 29, 2022}
+Today we conducted a peer review of each other's introductions. I think that my introduction/research is a little difficult to understand as a whole, but I have the following changes to make to my intro:
+
+\begin{itemize}
+    \item Add a graphic to make the introduction more interesting to read
+    \item FIX THE CITATIONS IN THE ITNRODUCTION. Use citep instead of just cite.
+    \item Make the second example box smaller, because it is taking up a lot of room. I think there are a couple of newlines in the second box that we can definitely remove though.
+\end{itemize}
+
+\subsection{Friday, September 30, 2022}
+No progress today; we moved from NCSSM \rightarrow home because of hurricane Ian.
+
+\subsection{Saturday, October 1, 2022}
+Today I wrote a script to combine Vaibhav's and I's datasets. WE HAVE OUR FULL 7K dataset now!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 Note: all of my sources are in Mendeley, so I don't have a bibliography here.
