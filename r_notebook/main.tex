@@ -1851,6 +1851,79 @@ No progress today; we moved from NCSSM \rightarrow home because of hurricane Ian
 \subsection{Saturday, October 1, 2022}
 Today I wrote a script to combine Vaibhav's and I's datasets. WE HAVE OUR FULL 7K dataset now!
 
+\subsection{Sunday, October 2, 2022}
+Today I re-ran the data analysis colab files with the new data from Vaibhav's annotations. I've added those to our final IEEE paper, along with some accompanying descriptions of each. Today I had a MASSIVE headache, so I didn't get that much done.
+
+
+\section{Week of October 3, 2022}
+
+\subsection{Monday, October 3, 2022}
+I retrained our BERT model to include Vaibhav's data as well today. Figure \ref{fig:bert_metrics} and \ref{fig:bert_training} shows the training and metrics data.
+
+\begin{figure}[hbt!]
+  \centering
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/bert_metrics.png}
+    \label{fig:bert_metrics}
+    \caption{Metrics of BERT model after being trained on 6500 rows of data and tested on 2000 rows random sample from the dataframe}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/bert_training.png}
+    \label{fig:bert_training}
+    \caption{Training history of the BERT model}
+  \end{minipage}
+\end{figure}
+
+Additionally, Figure \ref{fig:bert_history} shows the loss and accuracy progression of the model.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.8]{images/bert_history.png}
+    \caption{Loss and accuracy progression of the model}
+    \label{fig:bert_history}
+\end{figure}
+
+Today I also tried to use 10-fold cross-validation to remedy the class imbalance problem. However, the precision and recall scores were still quite low, after using 10-folds, 7 epochs on each fold, and received the following results, as shown in figure \ref{fig:ten_folds}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.8]{images/ten_folds.png}
+    \caption{10-fold cross validation for model}
+    \label{fig:ten_folds}
+\end{figure}
+
+\subsection{Tuesday, October 4, 2022}
+Today we used an XLNet cased model, an autoregressive Transformer that's comparable to BERT, and received really good results. We also did over-sampling of our dataset to do this, because our dataset was imbalanced, with ``none" having 3923 rows. Thus, we oversampled the rest of the rows using df.sample(replace=True) to make sure that all other rows also had 3923 rows. This created some really good results, with precision and recall for all categories being above 0.8 (mostly above 0.9). THIS IS HUGE.
+
+\subsection{Wednesday, October 5, 2022}
+Today I ran our XLNet cased model for 10 folds of cross validation, with the random state seeded at 1337. This took around 10 hours, since the GPU on Google Colab is slower, but the results are shown in \ref{fig:summary_xlnet}.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.4]{images/summary_xlnet.png}
+    \caption{10-fold cross validation for XLNet base cased}
+    \label{fig:fig:summary_xlnet}
+\end{figure}
+
+\subsection{Thursday, October 6, 2022}
+Today I trained a couple of more models on our dataset, including BERT and Roberta. I also got halfway done with DeBERTa's training. Today I also wrote an outline for the method section. WE ALSO SUBMITTED OUR ABSTRACT TO THE WWW CONFERENCE SPECIAL TRACK TODAY!
+
+\subsection{Friday, October 7, 2022}
+Today I finished training the microsoft/deberta-base model and I also trained a new the distilbert model. Additionally, I'm currently training an XLM-Roberta model, with the XLM-roberta being different than Roberta by the fact that XLM roberta is for multi-lingual text, which is somewhat like the text what we have in our dataset (which was from Indian whatsapp groups).
+
+Additionally, I've created the graph in Figure \ref{fig:compare_PR} that shows a comparison of the precision and recall by model. It's important to note the axis of this graph that all of these models are REALLY GOOD.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{images/compare_PR.png}
+    \caption{Comparison of the precision and recall by model}
+    \label{fig:compare_PR.png}
+\end{figure}
+
+I've also written a good bit of our research paper today, but I'm not following the guideliens of methods, results, etc, Im more talking about what we did for data analysis, model development, testing, etc. Im doing this because this makes more sense to me with how the paper is organized and such.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
