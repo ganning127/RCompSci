@@ -1923,6 +1923,75 @@ Additionally, I've created the graph in Figure \ref{fig:compare_PR} that shows a
 
 I've also written a good bit of our research paper today, but I'm not following the guideliens of methods, results, etc, Im more talking about what we did for data analysis, model development, testing, etc. Im doing this because this makes more sense to me with how the paper is organized and such.
 
+\subsection{Saturday, October 8, 2022}
+Today I revised the computational tools, data collection, data analysis, and model development sections of the rengeron paper and turned it in. I didn't know how to add the LDA topic extraction, as I'm not sure which heading each set of keywords extracted falls under. I'd have to talk to my mentor about that. However, I did turn in my methods draft!
+
+\subsection{Sunday, October 9, 2022}
+No progress today. I was moving into NCSSM and had to go out with parents in the morning.
+
+\section{Week of October 10, 2022}
+\subsection{Monday, October 11, 2022}
+Today we read over RCompSci applications in class. Some notable items:
+
+\begin{itemize}
+    \item Most good applicants already have a research idea \& write more
+    \item Most weak applicants did not have a reserach idea \& wrote shorter
+    \item It's good to brag about what you've done
+\end{itemize}
+
+\subsection{Tuesday, October 12, 2022}
+Today we read over the rest of the RCompSci applications. I also emailed the WWW conference folks to claritfy about the deadline for our research paper for the Web4Good track, and got the answer that the full paper for the Web4Good track is due on 11/18, so I have a bit of time before we actually need to submit it.
+
+\subsection{Wednesday, October 13, 2022}
+Today I wrote a script that classified sentences from our 7k annotated dataset using MultinomialNB, LogisticRegression, RandomForest, and LinearSVC methods. As expected, these simplistic methods did not perform nearly as well as the transformer based ones that we used. Across these simplistic methods, the recall score for ``none" was generally the highest, while ``action" was the type that was least detected correctly. The resutls can be seen in figures \ref{fig:simp_linear}, \ref{fig:simp_multi}, \ref{fig:simp_forest}, and \ref{fig:simp_logistic}.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{images/simp_linear.png}
+    \caption{Classification metrics of Linear SVM}
+    \label{fig:simp_linear}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{images/simp_forest.png}
+    \caption{Classification metrics of Random Forest}
+    \label{fig:simp_forest}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{images/simp_logistic.png}
+    \caption{Classification metrics of Logistic Regression}
+    \label{fig:simp_logistic}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{images/simp_multi.png}
+    \caption{Classification metrics of Multinomial Naive Bayes}
+    \label{fig:simp_multi}
+\end{figure}
+
+\subsection{Thursday, October 14, 2022}
+Today I got a couple of questions clarified by Mr. Gotwals:
+
+\begin{enumerate}
+    \item Regeneron papers have a specific format that they need to follow, the regeron template has that format
+    \item However, multiple "columns" can be used when the graphics are talking about the same topic
+    \item I can submit the paper to the WWW conference, however, I'll just need to write two papers in that case, one for regeron and one for WWW.
+\end{enumerate}
+
+I ended up grouping a lot of my graphics together, and now the page count on my regeron paper is a lot less. Placing graphs side by side in a single Figure saves a lot of room when they are talking about basically the same thing.
+
+\subsection{Friday, October 15, 2022}
+Today I began working on my Regeneron Application. Also I resized a lot of the graphics in my regeneron paper to be a fixed size (10, 6), which words best. I've combined certain graphics into one to save room as well
+
+\subsection{Saturday, October 16, 2022}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
