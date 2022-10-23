@@ -1989,8 +1989,54 @@ I ended up grouping a lot of my graphics together, and now the page count on my 
 Today I began working on my Regeneron Application. Also I resized a lot of the graphics in my regeneron paper to be a fixed size (10, 6), which words best. I've combined certain graphics into one to save room as well
 
 \subsection{Saturday, October 16, 2022}
+I began transferring the data from the non-transformer models to create a chart of the precision and recall scores by category for both the transformer based models and the non-transformer based models.
+
+\subsection{Sunday, October 17, 2022}
+Today I finished creating the graphic that I described yesterday. This finished figure can be seen in figure \ref{fig:including_non_trans}. This graphic clearly shows the difference between precision and recall of transformer-based and non-transformer based models.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.4]{images/including_non_trans.png}
+    \caption{Caption}
+    \label{fig:including_non_trans}
+\end{figure}
+
+\section{Week of October 18, 2022}
+\subsection{Monday, October 18, 2022}
+Today I wrote my results section (which was basically my model section, as that is the main result of our paper). I then revised this and turned it in.
+
+\subsection{Tuesday, October 19, 2022}
+Today I worked on my Regeneron application, specifically the questions about contributions to the project and activities list.
+
+\subsection{Wednesday, October 20, 2022}
+Today I wrote more of my regeneron application, (essays section), and uploaded our dataset to GitHub. I won't be uploading our code from the research to GitHub yet, because the Goolge Colab files aren't done yet, but I will do that evnetually. I'm also considering adding the model summary files to the GitHub as well.
+
+\subsection{Thursday, October 21, 2022}
+Today I met with Vaibhav to discuss our next steps. The list we came up with is:
+\begin{itemize}
+    \item Create f1 score (forumla can be found with precision and recall calcuations
+    \item Create macros for f1, recall, and precision by averaging each "4 categories"
+    \item Use SVC instead of just linear SVM, which is purely a varient of SVC.
+    \item Use different word embedding methods like tfidf, word2vec
+\end{itemize}
 
 
+\subsection{Friday, October 22, 2022}
+Today I wrote a script that utilizes different word embedding method and runs all four models we have on it. Today I did tfidf, but I also realized that SVM will not work as it clogs up Google Colab's RAM, so I must use LinearSVC. 
+
+\subsection{Saturday, October 23, 2022}
+Today I ran that same script but with word2vec. I attempted to use Glove and Universal sentence encoder, but I could not find any tutorials online that used these methods and still worked. 
+
+\subsection{Sunday, October 23, 2022}
+Today I aggregated the data and produced macro plots. FOr example, \ref{fig:macros} shows the plot of recall, precision, and f1 scores macros across all models.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.4]{images/macros.png}
+    \caption{Precision, Recall, and F1 score macros across all models. The transformer models can clearly be seen outperforming the other ones, but the TFIDF with linearSVC performs the best on the others.}
+    \label{fig:macros}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
